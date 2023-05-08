@@ -1,13 +1,4 @@
-pipeline {
-    agent {
-        docker {
-            image 'maven:3.9.0-eclipse-temurin-11'
-            args '-v /root/.m2:/root/.m2'
-        }
-    }
-    options {
-        skipStagesAfterUnstable()
-    }
+node{
         def registryProjet='registry.gitlab.com/devops2921/presentation-jenkins/Wartest'
         def IMAGE="${registryProjet}:version-${env.BUILD_ID}"
         
