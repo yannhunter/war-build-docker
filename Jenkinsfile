@@ -1,5 +1,5 @@
 node{
-        def registryProjet='registry.gitlab.com/devops2921/presentation-jenkins/Wartest'
+        def registryProjet='registry.gitlab.com/devops2921/presentation-jenkins/wartest'
         def IMAGE="${registryProjet}:version-${env.BUILD_ID}"
         
         stage('Clone') {
