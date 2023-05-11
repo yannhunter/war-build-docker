@@ -1,5 +1,5 @@
 node{
-        def registryProjet='registry.gitlab.com/devops2921/presentation-jenkins/Wartest'
+        def registryProjet='registry.gitlab.com/devops2921/presentation-jenkins/wartest'
         def IMAGE="${registryProjet}:version-${env.BUILD_ID}"
         
         stage('Clone') {
@@ -18,7 +18,7 @@ node{
             sh 'docker ps'
             sh 'netstat -ntaup'
             sh 'sleep 30s'
-            sh 'curl 192.168.10.5:8081'
+            sh 'curl localhost:8081'
             sh 'docker ps'
           }
         }
